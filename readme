@@ -1,0 +1,24 @@
+For run: ./lattice-modularity-test testfile
+In test file you must write action of automata, something like this:
+4
+7
+1 2 3 4 5 6 7
+1 1 1 4 4 6 6
+2 2 2 5 5 7 7
+3 3 3 5 5 6 6
+2 2 2 4 4 6 6
+Here '4' in first row - count of letters of alphabet, '7' in second row - count of 
+states of automaton, third row - names of states, and next 4 rows - how the 
+automaton is work.
+
+Also you can set third parameter 'd' for debug ouput (you will see full lattice in
+text form and connections between elements of lattice): ./lattice-modularity-test testfile d
+
+The output of the program is pdf file with image of the lattice, and dot file, 
+which it uses for generate pdf file (you can also out image of automaton, just
+decomment section in main file function automaton_print()).
+
+Program not stable. If count of elements of lattice was something >500, program will
+be fail.
+
+For compile run 'make'.
